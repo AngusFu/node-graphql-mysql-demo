@@ -1,0 +1,25 @@
+{
+  "name": "node-graphql-mysql-demo",
+  "version": "1.0.0",
+  "description": "node-graphql-mysql-demo",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AngusFu/node-graphql-mysql-demo.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/AngusFu/node-graphql-mysql-demo/issues"
+  },
+  "homepage": "https://github.com/AngusFu/node-graphql-mysql-demo#readme",
+  "dependencies": {
+    "faker": "^4.1.0",
+    "graphql": "^0.9.6",
+    "mysql": "^2.13.0",
+    "sequelize": "^3.30.4"
+  }
+}
