@@ -1,18 +1,17 @@
-const Koa = require('koa');
-const KoaRouter = require('koa-router');
-const KoaBody = require('koa-bodyparser');
-const { graphqlKoa } = require('graphql-server-koa');
-
+const express = require('express');
+const GraphQLHTTP = require('express-graphql');
+const bodyParser = require('body-parser');
+const { graphqlExpress } = require('graphql-server-express');
 const Schema = require('./Schema');
 
-const app = new Koa();
-const router = new KoaRouter();
-const PORT = 3000;
+const app = express();
 
-app.use(KoaBody());
-router.post('/graphql', graphqlKoa({ schema: Schema }));
-router.get('/graphql', graphqlKoa({ schema: Schema }));
+app.use('/graphql', GraphQLHTTP({
+  schema: Schema,
+  pretty: true,
+  graphiql: true
+}));
 
-app.use(router.routes());
-app.use(router.allowedMethods());
-app.listen(PORT);
+app.use('/api', bodyParser.json(), graphqlExpress({ schema: Schema }));
+
+app.listen(3000);
