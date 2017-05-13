@@ -1,11 +1,17 @@
-// https://www.youtube.com/watch?v=DNPVqK_woRQ
 const Sequelize = require('sequelize');
 const Faker = require('faker');
+const {
+  database,
+  user = 'root',
+  password = '',
+  host = 'localhost',
+  port = 3306
+} = require('../config.json');
 
-const Conn = new Sequelize('yywl', 'root', 'yyzl', {
+const Conn = new Sequelize(database, user, password, {
   dialect: 'mysql',
-  host: 'localhost',
-  port: 3306
+  host,
+  port
 });
 
 const Person = Conn.define('person', {
