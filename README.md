@@ -18,3 +18,7 @@ Then open `http://localhost:3000/graphql` in your browser.
 ## Reference
 
 - [Build a GraphQL server for Node.js, using PostgreSQL/MySQL](https://www.youtube.com/watch?v=DNPVqK_woRQ&list=WL&index=5)
+
+- http://graphql.org/graphql-js/
+
+- http://graphql.org/learn
