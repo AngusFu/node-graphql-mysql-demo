@@ -2,10 +2,11 @@
   "name": "node-graphql-mysql-demo",
   "version": "1.0.0",
   "description": "node-graphql-mysql-demo",
-  "main": "index.js",
+  "main": "src/index.js",
   "scripts": {
-    "lint": "eslint ./src/*.js",
-    "start": "nodemon ./src/server.js"
+    "dev": "nodemon src",
+    "test": "cross-env NODE_ENV=test nodemon src",
+    "start": "cross-env NODE_ENV=production node src"
   },
   "repository": {
     "type": "git",
@@ -18,24 +19,21 @@
   },
   "homepage": "https://github.com/AngusFu/node-graphql-mysql-demo#readme",
   "dependencies": {
-    "body-parser": "^1.17.1",
-    "express": "^4.15.2",
-    "express-graphql": "^0.6.4",
-    "faker": "^4.1.0",
-    "graphiql": "^0.10.2",
-    "graphql": "^0.9.6",
-    "graphql-server-express": "^0.7.2",
-    "mysql": "^2.13.0",
-    "react": "^15.5.4",
-    "react-dom": "^15.5.4",
-    "sequelize": "^3.30.4"
+    "body-parser": "latest",
+    "express": "latest",
+    "express-graphql": "latest",
+    "faker": "latest",
+    "graphiql": "latest",
+    "graphql": "latest",
+    "apollo-server-express": "latest",
+    "mysql2": "latest",
+    "react": "latest",
+    "react-dom": "latest",
+    "sequelize": "latest"
   },
   "devDependencies": {
-    "eslint": "^3.15.0",
-    "eslint-config-airbnb": "latest",
-    "eslint-plugin-import": "^2.2.0",
-    "eslint-plugin-jsx-a11y": "^3.0.2 || ^4.0.0",
-    "eslint-plugin-react": "^6.9.0",
-    "nodemon": "^1.11.0"
+    "cross-env": "latest",
+    "graphql-voyager": "latest",
+    "nodemon": "latest"
   }
 }
